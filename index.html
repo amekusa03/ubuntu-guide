@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu導入ガイド</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body {
+        font-family: sans-serif; /* 読みやすいフォントに設定 */
+        padding: 20px;
+        text-align: center; /* コンテンツを中央揃え */
+        max-width: 960px; /* 画面幅が広い場合の最大幅 */
+        margin: 0 auto; /* 左右中央に配置 */
+    }
+    h1 {
+        font-size: 2.2em; /* フォントサイズを調整 */
+        color: #333; /* 文字色を濃いグレーに */
+        border-bottom: 3px solid #007bff; /* ボタンの色と合わせた下線 */
+        display: inline-block; /* 下線の幅をテキストに合わせる */
+        padding-bottom: 5px; /* テキストと下線の間の余白 */
+        margin-bottom: 15px; /* 見出しと下の説明文の間の余白 */
+    }
+    p {
+        color: #555;
+        margin-bottom: 30px; /* 動画との余白を調整 */
+    }
+    table {
+        width: 100%;
+        max-width: 600px; /* テーブルの最大幅を制限 */
+        border-collapse: collapse; /* 枠線を一本化 */
+        margin: 20px auto; /* 上下の余白と左右の中央揃え */
+    }
+    th, td {
+        border: 1px solid #ccc; /* 薄いグレーの枠線 */
+        padding: 12px; /* 内側の余白を広げて見やすく */
+        text-align: center;
+    }
+    th {
+        background-color: #f4f4f4; /* 見出しに背景色を追加 */
+    }
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9のアスペクト比を維持 (9 / 16 = 0.5625) */
+        height: 0;
+        overflow: hidden;
+        max-width: 800px; /* 動画が大きくなりすぎないように最大幅を設定（任意） */
+        margin: 0 auto 20px auto; /* 中央揃えと下の余白 */
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .btn-download {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #007bff; /* ボタンの背景色（青） */
+        color: white;
+        text-decoration: none; /* 下線を消す */
+        border-radius: 4px; /* 角を少し丸くする */
+        transition: background-color 0.3s;
+    }
+    .btn-download:hover {
+        background-color: #0056b3; /* ホバー時に色を濃くする */
+    }
+    .btn-download i {
+        margin-right: 8px; /* アイコンとテキストの間隔 */
+    }
+</style>
+</head>
+<body>
+
+<h1>Ubuntu導入ガイド</h1>
+<p>you tube動画とPDF、PPTXファイルをダウンロード</p>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/m0lFwpMAM2Q?si=9hDpcEQlDkx3qVaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <table>
+    <tr>
+      <th></th>
+      <th>PDF</th>
+      <th>PPTX</th>
+    </tr>
+    <tr>
+      <td>家庭用</td>
+      <td><a href="linux_PC_for_fami.pdf" download class="btn-download"><i class="fas fa-file-pdf"></i> 家庭用PDF</a></td>
+      <td><a href="Linux_PC_for_fami.pptx" download class="btn-download"><i class="fas fa-file-powerpoint"></i> 家庭用PPTX</a></td>
+    </tr>
+    <tr>
+      <td>職場用</td>
+      <td><a href="linux_PC_for_Busi.pdf" download class="btn-download"><i class="fas fa-file-pdf"></i> 職場用PDF</a></td>
+      <td><a href="Linux_PC_for_Busi.pptx" download class="btn-download"><i class="fas fa-file-powerpoint"></i> 職場用PPTX</a></td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
