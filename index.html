@@ -12,24 +12,26 @@
         text-align: center; /* コンテンツを中央揃え */
         max-width: 960px; /* 画面幅が広い場合の最大幅 */
         margin: 0 auto; /* 左右中央に配置 */
+        background-color: #fdfcf0; /* パステルクリームの背景色 */
+        color: #5d4037; /* 文字色を柔らかいブラウンに */
     }
     h1 {
         font-size: 2.2em; /* フォントサイズを調整 */
-        color: #333; /* 文字色を濃いグレーに */
-        border-bottom: 3px solid #007bff; /* ボタンの色と合わせた下線 */
+        color: #5d4037; /* 文字色をブラウンに */
+        border-bottom: 3px solid #ffb74d; /* パステルオレンジの下線 */
         display: inline-block; /* 下線の幅をテキストに合わせる */
         padding-bottom: 5px; /* テキストと下線の間の余白 */
         margin-bottom: 15px; /* 見出しと下の説明文の間の余白 */
     }
     p {
-        color: #555;
+        color: #8d6e63; /* 説明文も少し明るめのブラウンに */
         margin-bottom: 30px; /* 動画との余白を調整 */
     }
     table {
         width: 100%;
         max-width: 600px; /* テーブルの最大幅を制限 */
         border-collapse: collapse; /* 枠線を一本化 */
-        margin: 20px auto; /* 上下の余白と左右の中央揃え */
+        margin: 0 auto; /* 中央揃え（余白はラッパーで設定） */
     }
     th, td {
         border: 1px solid #ccc; /* 薄いグレーの枠線 */
@@ -37,7 +39,25 @@
         text-align: center;
     }
     th {
-        background-color: #f4f4f4; /* 見出しに背景色を追加 */
+        background-color: #e1f5fe; /* テーブル見出しをパステルブルーに */
+    }
+    /* レスポンシブ対応用のラッパー */
+    .table-wrapper {
+        max-width: 600px;
+        margin: 20px auto; /* 上下の余白と左右の中央揃え */
+        overflow-x: auto; /* 画面幅が狭い時に横スクロールを表示 */
+        -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかに */
+    }
+    /* スマートフォン向けの調整 */
+    @media (max-width: 600px) {
+        th, td {
+            padding: 8px 4px; /* 余白を詰める */
+            font-size: 0.9em; /* 文字サイズを少し小さく */
+        }
+        .btn-download {
+            padding: 6px 10px; /* ボタンのサイズ調整 */
+            font-size: 0.85em;
+        }
     }
     .video-container {
         position: relative;
@@ -58,14 +78,14 @@
     .btn-download {
         display: inline-block;
         padding: 8px 16px;
-        background-color: #007bff; /* ボタンの背景色（青） */
+        background-color: #4fc3f7; /* ボタンの背景色（パステルブルー） */
         color: white;
         text-decoration: none; /* 下線を消す */
         border-radius: 4px; /* 角を少し丸くする */
         transition: background-color 0.3s;
     }
     .btn-download:hover {
-        background-color: #0056b3; /* ホバー時に色を濃くする */
+        background-color: #29b6f6; /* ホバー時に少し濃くする */
     }
     .btn-download i {
         margin-right: 8px; /* アイコンとテキストの間隔 */
@@ -75,12 +95,16 @@
 <body>
 
 <h1>Ubuntu導入ガイド</h1>
-<p>you tube動画とPDF、PPTXファイルをダウンロード</p>
+<p>YouTube動画とPDF、PPTXファイルをダウンロード</p>
 
     <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/m0lFwpMAM2Q?si=9hDpcEQlDkx3qVaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/m0lFwpMAM2Q?si=9hDpcEQlDkx3qVaw" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
+    <div class="table-wrapper">
     <table>
     <tr>
       <th></th>
@@ -98,8 +122,9 @@
       <td><a href="Linux_PC_for_Busi.pptx" download class="btn-download"><i class="fas fa-file-powerpoint"></i> 職場用PPTX</a></td>
     </tr>
   </table>
+    </div>
 
-<p>you tube動画とPDF、PPTXファイルをダウンロード</p>
+<p>YouTube動画とPDF、PPTXファイルをダウンロード</p>
 
 
 
